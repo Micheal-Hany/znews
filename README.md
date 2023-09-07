@@ -1,12 +1,21 @@
 # znews
 
-A new Flutter project.
+Znews App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+youtube link ------>  https://www.youtube.com/watch?v=vluzKPDpOXA
+
+
+📣 Exciting News! 📣
+Introducing the Znews App - Your One-Stop Source for All Things News! 🌍✨
+Stay informed, stay connected, and stay ahead with the Znews App! 📲🗞️
+👉 Get real-time updates on breaking news from around the globe.
+👉 Personalize your news feed based on your interests and preferences.
+👉 Discover in-depth articles, opinion pieces, and exclusive interviews.
+👉 Watch live streams and catch up on the latest videos from top news channels.
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
