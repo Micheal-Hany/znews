@@ -25,23 +25,29 @@ class CustomSerchViewBody extends StatelessWidget {
           final Either<Failure, List<Article>> result = snapshot.data!;
           return result.fold(
             (failure) => Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: MediaQuery.of(context).size.height * .3),
-                child: const CustomErrorMassage(
-                    erorMassage: 'Enter search words...')),
-            (articles) => SizedBox(
-              height: MediaQuery.of(context).size.height * .7,
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                child: Column(
-                  children: articles
-                      .map((article) => customDisplaySearchNews(
-                            article: article,
-                          ))
-                      .toList(),
-                ),
+              padding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.height * .3,
+              ),
+              child: const CustomErrorMassage(
+                erorMassage: 'Enter search words...',
               ),
             ),
+            (articles) {
+              articles.removeWhere((article) => article.title == null);
+              return SizedBox(
+                height: MediaQuery.of(context).size.height * .7,
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    children: articles
+                        .map((article) => customDisplaySearchNews(
+                              article: article,
+                            ))
+                        .toList(),
+                  ),
+                ),
+              );
+            },
           );
         }
         if (snapshot.connectionState == ConnectionState.waiting) {

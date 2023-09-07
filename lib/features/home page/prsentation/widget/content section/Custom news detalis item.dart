@@ -53,7 +53,7 @@ class CustomNewsDetailesBody extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Published on ${article.publishedAt ?? ''.replaceAll('T', ' at ').replaceAll('Z', '')}',
+                  'Published on ${article.publishedAt?.replaceAll('T', ' at ').replaceAll('Z', '') ?? ''}',
                   style: Style.textStyle14
                       .copyWith(color: Colors.black.withOpacity(.7)),
                 ),

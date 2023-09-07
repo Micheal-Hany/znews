@@ -113,10 +113,7 @@ class _CustomCategorylistViewState extends State<CustomCategorylistView>
     await box.deleteAt(indexToDelete);
     BlocProvider.of<TapBarCubit>(context).fetchTapBarListView();
     BlocProvider.of<InterrestCubit>(context).featchInterrest();
-
-    if (indexToDelete == currentIndex) {
-      _tabController!.index = indexToDelete == 0 ? 0 : indexToDelete - 1;
-    }
+    _tabController!.index = indexToDelete == 0 ? 0 : indexToDelete - 1;
   }
 
   Future<void> backToInterestsListView(String category) async {

@@ -22,7 +22,7 @@ class CustomAutherInfo extends StatelessWidget {
               style: Style.textStyle14
                   .copyWith(color: Colors.black.withOpacity(.7)),
             ),
-            Text(auther.length < 30 ? auther : auther.substring(0, 29),
+            Text(auther.length < 32 ? auther : auther.substring(0, 31),
                 style: Style.textStyle16.copyWith(color: Colors.black))
           ],
         )
