@@ -139,12 +139,12 @@ class CustomDetailedNewsBody extends StatelessWidget {
       ),
     );
   }
-
+  
   String _stripHtmlTags(String htmlString) {
     return htmlString
-        .replaceAll(RegExp('<.*?>'), '') // Remove all HTML tags
-        .replaceAll('\n', '') // Remove newline characters
-        .replaceAll('\r', '') // Remove carriage return characters
+        .replaceAll(RegExp('<.*?>'), '') 
+        .replaceAll('\n', '') 
+        .replaceAll('\r', '') 
         .replaceAll('&nbsp;', '');
-  } // Remove
+  } 
 }
